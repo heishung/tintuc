@@ -15,4 +15,15 @@ class C_tintuc {
         return array('slide'=>$slide,'menu'=>$menu);
     }
 
+    /**
+     * @return array
+     */
+    function loaitin(){
+        $id_loai = $_GET['id_loai'];
+        $m_tintuc = new M_tintuc();
+        $danhmuctin=$m_tintuc->getTinTucByidLoaiTin($id_loai);
+        return array('danhmuctin'=>$danhmuctin);
+    }
+
+
 }
